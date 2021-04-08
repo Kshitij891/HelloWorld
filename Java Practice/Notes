@@ -1,0 +1,29 @@
+Collection(i) --> List(i) ---> ArrayList(c) + LinkedList(c) + Vector(c)
+Collection(i) --> Set(i) ---->  HashSet(c) + LinkedHashedSet(c)
+Collection(i) --> Set(i) ---->  SortedSet(i) + TreeSet(c)
+
+Map(i)-->Hashtable(c) + LinkedHashMap(c) + HashMap(c)
+Map(i)-->SoretdMap(i)--->TreeMap(c)
+
+
+On right hand side we want class which can implement the interface present on left hand side.
+
+Collection ref=new ArrayList();             Can use method of Collection interface only.
+List ref=new ArrayList();                   Can use method of List & Collection interface only.
+ArrayList ref=new ArrayList();              Can use method of Collection, List & ArrayList.
+
+List allow Duplicate values. If we dont want duplicate values we use Set.           
+Set ref=new HashSet(); 
+
+If we dont want duplicate values and want sorted data we use TreeSet.
+Set ref=new TreeSet(); 
+
+In Map every value will have key.
+Map<key,value> ref=new HashMap();
+
+
+<-----------------GENERICS------------------>
+
+Generic are always class (Integer, String ,Student)
+list ref=new ArrayList();                           Since no generic type specified Arraylist can store any objects (Integer , Float, String)
+list<Integer> ref=new ArrayList<Integer>();         Can only store Integers value
